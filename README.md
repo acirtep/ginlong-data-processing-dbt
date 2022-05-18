@@ -6,3 +6,5 @@ Repository which containts the dbt setup for Ginlong solar pannels data processi
 3. Activate venv `source venv_dbt/bin/activate`
 4. Install requirements `pip install -r requirements.txt`
 5. Configure the env variables from env/example_env_vars.env
+6. Build docker service `docker-compose build`
+7. Run docker service `docker-compose up`
