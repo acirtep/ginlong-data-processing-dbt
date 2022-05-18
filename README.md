@@ -5,4 +5,4 @@ Repository which containts the dbt setup for Ginlong solar pannels data processi
 2. Create virtual env `python -m venv venv_dbt`
 3. Activate venv `source venv_dbt/bin/activate`
 4. Install requirements `pip install -r requirements.txt`
-5. set profile directory `export DBT_PROFILES_DIR=/Users/petra1/Petra_all/python_playground/ginlong-data-processing-dbt/ginlong_data_processing/profiles.yml`
+5. Configure the env variables from env/example_env_vars.env
