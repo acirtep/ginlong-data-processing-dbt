@@ -1,0 +1,62 @@
+
+version: 2
+
+models:
+  - name: dbt_inverter_daily_agg_table
+    description: "The agg table of daily data"
+    config:
+      materialized: table
+    columns:
+      - name: reporting_date
+        tests:
+          - unique
+          - not_null
+      - name: inverter_serial_number
+        tests:
+          - not_null
+      - name: produced_kwh
+        tests:
+          - not_null
+      - name: inserted_datetime
+        tests:
+          - not_null
+  - name: dbt_inverter_daily_agg_incr
+    description: "The agg incr table of daily data"
+    config:
+      materialized: incremental
+    columns:
+      - name: reporting_date
+        tests:
+          - unique
+          - not_null
+      - name: inverter_serial_number
+        tests:
+          - not_null
+      - name: produced_kwh
+        tests:
+          - not_null
+      - name: inserted_datetime
+        tests:
+          - not_null
+  - name: dbt_inverter_daily_agg_view
+    description: "The agg view of daily data"
+    config:
+      materialized: view
+    columns:
+      - name: reporting_date
+        tests:
+          - unique
+          - not_null
+      - name: inverter_serial_number
+        tests:
+          - not_null
+      - name: produced_kwh
+        tests:
+          - not_null
+      - name: inserted_datetime
+        tests:
+          - not_null
+  - name: dbt_inverter_daily_agg_ctas
+    description: "The agg view of daily data"
+    config:
+      materialized: ephemeral
